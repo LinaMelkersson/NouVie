@@ -6,6 +6,7 @@
     v-model="valid"
     lazy-validation
   >
+  <h2 style="text-align:center;">Welcome back</h2>
 
     <v-text-field
       v-model="email"

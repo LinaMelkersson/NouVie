@@ -21,6 +21,7 @@
             <router-link
             to="/shop"
             v-slot="{href, route, navigate}"
+            custom
             >
             <button :href="href" @click="navigate">
                 <h4>{{ route.name }}</h4>
@@ -32,6 +33,7 @@
             <router-link
             to="/contact"
             v-slot="{href, route, navigate}"
+            custom
             >
             <button :href="href" @click="navigate">
                 <h4>{{ route.name }}</h4>
@@ -43,6 +45,7 @@
             <router-link
             to="/blog"
             v-slot="{href, route, navigate}"
+            custom
             >
             <button :href="href" @click="navigate">
                 <h4>{{ route.name }}</h4>
@@ -55,6 +58,7 @@
             <router-link
             to="/account"
             v-slot="{href, navigate}"
+            custom
             >
             <button :href="href" @click="navigate" style="display: grid; grid-template-columns: 1fr 2fr; color: grey;">
                 <v-icon color="grey lightend-2">mdi-account</v-icon><p>Account</p>
@@ -97,16 +101,21 @@
       </v-list>
     </v-menu>
 
-    <div class="loggo">
-        <v-img
-        src="@/assets/loggo.png"
-        max-height="50"
-        max-width="90"
-        object-fit
-        ></v-img>
-        
-    </div>
-
+    <router-link
+            to="/"
+            v-slot="{href, navigate}"
+            custom
+            >
+            <button :href="href" @click="navigate" style="margin:auto;">
+            <v-img
+            src="@/assets/loggo.png"
+            max-height="50"
+            max-width="90"
+            object-fit
+            ></v-img>
+            </button>
+    </router-link>
+  
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
         <v-btn

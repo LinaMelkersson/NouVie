@@ -21,6 +21,7 @@
             v-model="valid"
             lazy-validation
         >
+        <h2 style="text-align:center;">Register</h2>
 
             <v-text-field
             v-model="FirstName"
